@@ -4,7 +4,7 @@ Create acronyms from sentences
 
 ## What is this?
 
-This is a toy package we [created together on Twitch on 2022-01-26](https://www.twitch.tv/videos/1277115435) as a way to talk about some of what people can learn in [_Publishing Python Packages_](https://pypackages.com).
+This is a toy package we [created together on Twitch on 2022-01-26](https://www.twitch.tv/videos/1277115435) as a way to talk about some of what people can learn in [_Publishing Python Packages_](https://pypackages.com) and the corresponding [code companion](https://github.com/daneah/publishing-python-packages).
 
 ## Tools mentioned
 

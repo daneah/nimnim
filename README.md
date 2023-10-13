@@ -1,4 +1,4 @@
-# nimmer
+# nimnim
 
 Create acronyms from sentences
 

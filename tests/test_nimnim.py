@@ -1,4 +1,4 @@
-from nimmer import nim
+from nimnim import nim
 
 
 def test_empty_string():

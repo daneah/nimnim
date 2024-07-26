@@ -1,0 +1,13 @@
+black==24.4.2
+build==1.2.1
+flake8==7.1.0
+mypy==1.11.0
+mypy-extensions==1.0.0
+py==1.11.0
+pyproject-api==1.7.1
+pyproject_hooks==1.1.0
+pytest==8.3.1
+tomli==2.0.1
+tox==4.16.0
+typing_extensions==4.12.2
+virtualenv==20.26.3

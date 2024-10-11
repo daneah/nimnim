@@ -1,3 +1,62 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">=3.10"
+name = "nimnim"
+version = "0.0.1"
+description = "Create acronyms from sentences"
+authors = [
+    { name = "Dane Hillard", email = "github@danehillard.com" }
+]
+license = { file = "LICENSE" }
+
+[project.urls]
+Repository = "https://github.com/daneah/nimnim"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["test*"]
+
+[tool.setuptools.dynamic]
+readme = { file = "README.md", content-type = "text/markdown" }
+
+######################
+# Tool configuration #
+######################
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+show_error_context = true
+pretty = true
+namespace_packages = true
+
+[tool.tox]
+envlist = ["py310", "py311", "py312", "py313"]
+isolated_build = true
+
+[tool.tox.env_run_base]
+deps = [
+    "pytest",
+]
+commands = [
+    ["pytest", { replace = "posargs", default = [], extend = true }],
+]
+
+[tool.tox.env.typecheck]
+deps = [
+    "mypy",
+]
+commands = [
+    ["mypy", { replace = "posargs", default = ["src", "tests"], extend = true }],
+]
+
+[tool.tox.env.format]
+deps = [
+    "black",
+]
+commands = [
+    ["black", { replace = "posargs", default = ["--check", "--diff", "."], extend = true }],
+]
